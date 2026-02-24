@@ -27,7 +27,7 @@ namespace API.Controllers
 
         public async Task<IActionResult> Create(CreateTicketDto dto)
         {
-            var userId = User.FindFirst("UserId").Value;
+            var userId = User.FindFirst("Sub").Value;
        
             var entity = new Tickets
             {
@@ -85,4 +85,5 @@ namespace API.Controllers
         }
 
     }
+
 }
